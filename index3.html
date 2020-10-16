@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+<meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <style>
+      /*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+    font-family: "Open Sans", sans-serif;
+    color: rgb(39, 39, 39);
+    background-color: whitesmoke;
+  }
+  
+  a {
+    color: rgb(228, 214, 224);
+  }
+  
+  a:hover {
+    color: rgb(229, 219, 232) ;
+    text-decoration: none;
+  }
+  h1, h2, h3, h4, h6 {
+    font-family: "Raleway", sans-serif;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+
+  h5 {
+    font-family: "Raleway", sans-serif;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  .section-title{
+    padding-top: 50px;
+  }
+  
+  /*--------------------------------------------------------------
+  # Back to top button
+  --------------------------------------------------------------*/
+  .back-to-top {
+    position: fixed;
+    display: none;
+    right: 15px;
+    bottom: 15px;
+    z-index: 99999;
+  }
+  
+  .back-to-top i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background: rbg;
+    color: #fff;
+    transition: all 0.4s;
+  }
+  
+  .back-to-top i:hover {
+    background: #ffc550;
+    color: #fff;
+  }
+  
+  /*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+  #header {
+    height: 80px;
+    transition: all 0.5s;
+    z-index: 997;
+    transition: all 0.5s;
+  }
+  
+  #header.header-scrolled {
+    background: rgba(25, 28, 31, 0.8);
+    height: 60px;
+  }
+  
+  /*--------------------------------------------------------------
+  # Navigation Menu
+  --------------------------------------------------------------*/
+  /* Desktop Navigation */
+  .nav-menu, .nav-menu * {
+    margin: 100;
+    padding: 0;
+    list-style: none;
+  
+    
+  }
+  
+  .nav-menu > ul {
+    display: flex;
+  }
+  
+  .nav-menu > ul > li {
+    position: relative;
+    justify-content: center;
+    
+  }
+  
+  .nav-menu a {
+    display: block;
+    position: relative;
+    color: rgb(187, 155, 176);
+    padding: 10px 15px;
+    transition: 0.3s;
+    font-size: 12px;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+  }
+  
+  .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+    color: rgb(66, 0, 57);
+    text-decoration: none;
+  }
+  
+  .nav-menu .drop-down ul {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: calc(100% + 30px);
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    padding: 10px 0;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: ease all 0.3s;
+  }
+  
+  .nav-menu .drop-down:hover > ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+  
+  .nav-menu .drop-down li {
+    min-width: 180px;
+    position: relative;
+  }
+  
+  .nav-menu .drop-down ul a {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: none;
+    color: #3b434a;
+  }
+  
+  .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
+    color: rgb(187, 155, 176);
+  }
+  
+  .nav-menu .drop-down > a:after {
+    content: "\ea99";
+    font-family: IcoFont;
+    padding-left: 5px;
+  }
+  
+  .nav-menu .drop-down .drop-down ul {
+    top: 0;
+    left: calc(100% - 30px);
+  }
+  
+  .nav-menu .drop-down .drop-down:hover > ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+  }
+  
+  .nav-menu .drop-down .drop-down > a {
+    padding-right: 35px;
+  }
+  
+  .nav-menu .drop-down .drop-down > a:after {
+    content: "\eaa0";
+    font-family: IcoFont;
+    position: absolute;
+    right: 15px;
+  }
+  
+  @media (max-width: 1366px) {
+    .nav-menu .drop-down .drop-down ul {
+      left: -90%;
+    }
+    .nav-menu .drop-down .drop-down:hover > ul {
+      left: -100%;
+    }
+    .nav-menu .drop-down .drop-down > a:after {
+      content: "\ea9d";
+    }
+  }
+  
+  /* Mobile Navigation */
+  .mobile-nav-toggle {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    z-index: 9998;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    transition: all 0.4s;
+    outline: none !important;
+    line-height: 1;
+    cursor: pointer;
+    text-align: right;
+  }
+  
+  .mobile-nav-toggle i {
+    color: #fff;
+  }
+  
+  .mobile-nav {
+    position: fixed;
+    top: 55px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    z-index: 9999;
+    overflow-y: auto;
+    background: #fff;
+    transition: ease-in-out 0.2s;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 10px;
+    padding: 10px 0;
+  }
+  
+  .mobile-nav * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .mobile-nav a {
+    display: block;
+    position: relative;
+    color: #3b434a;
+    padding: 10px 20px;
+    font-weight: 500;
+    outline: none;
+  }
+  
+  .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
+    color: rgb(187, 155, 176);;
+    text-decoration: none;
+  }
+  
+  .mobile-nav .drop-down > a:after {
+    content: "\ea99";
+    font-family: IcoFont;
+    padding-left: 10px;
+    position: absolute;
+    right: 15px;
+  }
+  
+  .mobile-nav .active.drop-down > a:after {
+    content: "\eaa1";
+  }
+  
+  .mobile-nav .drop-down > a {
+    padding-right: 35px;
+  }
+  
+  .mobile-nav .drop-down ul {
+    display: none;
+    overflow: hidden;
+  }
+  
+  .mobile-nav .drop-down li {
+    padding-left: 20px;
+  }
+  
+  .mobile-nav-overly {
+    width: 100%;
+    height: 100%;
+    z-index: 9997;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(36, 41, 46, 0.6);
+    overflow: hidden;
+    display: none;
+    transition: ease-in-out 0.2s;
+  }
+  
+  .mobile-nav-active {
+    overflow: hidden;
+  }
+  
+  .mobile-nav-active .mobile-nav {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .mobile-nav-active .mobile-nav-toggle i {
+    color: #fff;
+  }
+  
+  /*--------------------------------------------------------------
+  /*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  background: url("img/Untitled design (2).png") top right;
+}
+
+position: relative;
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.65);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#img-fluid{
+  
+  max-width: 100%;
+  height: auto;
+  float: left;
+  padding-top: 30px;
+}
+
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 64px;
+  font-family: "Satisfy", serif;
+  color: #fff;
+}
+
+#hero h2 {
+  color: #eee;
+  margin-bottom: 50px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#hero .btn-scroll {
+  transition: 0.4s;
+  color: rgba(255, 255, 255, 0.6);
+  animation: up-down 1s ease-in-out infinite alternate-reverse both;
+}
+
+#hero .btn-scroll i {
+  font-size: 48px;
+}
+
+#hero .btn-scroll:hover {
+  color: #ffb727;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 575px) {
+  #hero h1 {
+    font-size: 40px;
+  }
+  #hero h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+.col-lg-6{
+  padding-top: 30px;
+}
+.icon-box {
+  margin-left: 150px;
+
+}
+hr{
+
+  margin-bottom: 35px;
+  margin-top: 35px;
+  height: 2px;
+  background-color: rgb(165, 102, 139);
+  border: none;
+  width: 20%; 
+  text-align: center;
+}
+.about .content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #3b434a;
+  text-transform: uppercase;
+}
+
+.about .image {
+  background: url("img/dee.jpg") center center no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  border-radius: 25px;
+}
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+.skills .progress {
+  height: 50px;
+  display: block;
+  background: none;
+}
+
+.skills .progress .skill {
+  padding: 10px 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: rgb(39, 39, 39);
+}
+
+.skills .progress .skill .val {
+  float: right;
+  font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+  background: rgb(39, 39, 39);
+}
+
+.skills .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: .9s;
+  background-color: rgb(187, 155, 176);
+}
+
+
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top  d-flex justify-content-center align-items-center">
+
+    <nav class="nav-menu d-none d-lg-block">
+      <ul>
+        <li class="active"><a href="#header">Home</a></li>
+        <li><a href="#ABOUT">About</a></li>
+        <li><a href="Skills">Skills</a></li>
+        <li><a href="Services">Services</a></li>
+        <li><a href="CONTACT ME">Contact</a></li>
+
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </header><!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+        <div class="hero-container">
+          <h1>Deone K Jeranyama</h1>
+          <h2>I'm a Software Developer,Telecoms Eng...</h2>
+          <a href="#about" class="btn-scroll scrollto" title="Scroll Down"><i class="bx bx-chevron-down"></i></a>
+        </div>
+      </section><!-- End Hero -->
+    
+      <main id="main">
+        
+ <!-- ======= About Me Section ======= -->
+ 
+ <section id="about" class="about">
+    <div class="container">
+
+      <div class="section-title">
+        <hr >
+        <h2>About Me</h2>
+        <hr>
+        <p><b>Hi I'm Deone K Jeranyama</b> Over the years , i have focused on being a seasoned and highly competent professional in my field,using well-developed technical and interpersonal skills required in delivering value-adding services in a dynamic and proactive environment.</p><br>
+
+            <p>That being my career objective, no doubt i possess effective problem solving abilities.</p>
+            <p class="p-heading">I'm also passionate about clean, simple & unique designs and i'm also widely drawn into innovation. I also enjoy crafting brand identities & ilustration work apart from being an Engineer and an Entrepreneur. </p>
+            <p class="separator">This is a recently found passion and i really enjoy designing as a part time job as it is a way to escape from the heat and rush of the day.“Design is not just what it looks like and feels like. Design is how it works.” –Steve Jobs</p>
+      </div>
+      <div class="row">
+        <div class="image col-lg-4 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
+        <div class="col-lg-8 d-flex flex-column align-items-stretch">
+          <div class="content pl-lg-4 d-flex flex-column justify-content-center"></div>
+            <div class="row"><br><br>
+              <div class="col-lg-6">
+                <ul>
+                  <i class="icofont-rounded-right"></i> <strong>Name:</strong> Deone K Jeranyama<br>
+                  <i class="icofont-rounded-right"></i> <strong>Website:</strong>jeranyamad.wixsite.com<br>
+                  <i class="icofont-rounded-right"></i> <strong>Phone:</strong> +263 700000000<br>
+                  <i class="icofont-rounded-right"></i> <strong>City:</strong> City : Harare, Zimbabwe<br>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <i class="icofont-rounded-right"></i> <strong>Age:</strong> 22<br>
+                  <i class="icofont-rounded-right"></i> <strong>Education:</strong> Diploma-Telecoms Eng<br>
+                  <i class="icofont-rounded-right"></i> <strong>Email:</strong> jeranyamad@gmail.com<br>
+                  <i class="icofont-rounded-right"></i> <strong>Freelance:</strong> Available<br>
+                </ul>
+              </div>
+
+             
+    <!-- ======= Skills  ======= -->
+    
+    <div class="skills container">
+     
+        <div class="section-title">
+          <hr >
+          <h2>Skills</h2>
+          <hr>
+        </div>
+  
+        <div class="row skills-content">
+  
+          <div class="col-lg-6">
+  
+            <div class="progress">
+              <span class="skill">HTML <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar"style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+  
+            <div class="progress">
+              <span class="skill">CSS <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar"style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+  
+            <div class="progress">
+              <span class="skill">JavaScript <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" style="width: 75%"aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+  
+          </div>
+  
+          <div class="col-lg-6">
+  
+            <div class="progress">
+              <span class="skill">Java <i class="val">65%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar"style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+  
+            <div class="progress">
+              <span class="skill">WordPress/CMS <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar"style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+  
+            <div class="progress">
+              <span class="skill">C Programming <i class="val">95%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" style="width: 95%"aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </div><!-- End Skills -->
+            </div>
+          </div><!-- End .content-->
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End About Me Section -->
+
+  <!--Services section start-->
+  
+  <section id="services" class="services">
+   <div class="container">
+      <div class="section-title">
+        <hr >
+        <h2>Services</h2>
+        <hr>
+      </div>
+
+
+          <div class="services-block">
+            <div class="row">
+              <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+                <div class="icon-box">
+                  <i class="ri-base-station-line" style="color: #ff5828;"></i>
+                  <h5><span>TELECOMMUNICATION ENG.</span></h5>
+                  <p class="separator">Student at TelOne Centre For Learning,Harare </p>
+                </div>
+              </div>
+          
+              <!--interests start-->
+              <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+          <div class="icon-box">
+            <i class="icofont-light-bulb" style="color: #5578ff;"></i>
+            <h5><span>INNOVATION</span></h5>
+            <p class="separator">“The true sign of intelligence is not knowledge but imagination." -- Albert Einstein </p>
+          </div>
+        </div>
+
+        <div class="row"
+        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+          <div class="icon-box">
+            <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
+            <h5><span>ENTREPRENEURSHIP</span></h5>
+            <p class="separator">Tony Elumelu Foundation(TEF) Entrepreneur 2019 </p>
+            <p class="separator">CEO of DeonK Incorporation </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+          <div class="icon-box">
+            <i class="icofont-brand-android-robot" style="color: green;"></i>
+          <h5><span>MOBILE APPS</span></h5>
+          <p class="separator">Google Certified Android Developer 2019 </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="icofont-code" style="color: purple;"></i>
+            <h5><span>WEB DESIGN</span></h5>
+              <p class="separator">"Make it simple, but significant." -- Don Draper, fictional character on Mad Men </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="icofont-pen-holder-alt-1" style="color: #ffa76e;"></i>
+            <h5><span>POETRY</span></h5>
+              <p class="separator">Co-founded ERUDITE_ZW a writers platform that had a vision of letting writers stories unfold.(2016)  </p>
+          </div>
+        </div>
+        </div>
+      </div>
+
+    </div>
+    <!--End Interests -->
+              
+
+  <!-- end section services -->
+      </div>
+
+   </div>
+
+  </section>
+
+
+
+ 
+   <!--Contact Section -->
+  
+   <section id="contact" class="contact">
+    <div class="container">
+  
+      <div class="section-title">
+        <hr >
+        <h2>Contact Me</h2>
+        <hr>
+      </div>
+
+      <div class="row mt-2">
+
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-map" style="color: rgb(165, 102, 139);"></i>
+            <h3>My Address</h3>
+            <p>A100 Adam Street, Harare, Zimbabwe</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-share-alt" style="color: rgb(165, 102, 139);"></i>
+            <h3>Social Profiles</h3>
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="icofont-twitter" style="color: rgb(165, 102, 139);"></i></a>
+              <a href="#" class="facebook"><i class="icofont-facebook" style="color: rgb(165, 102, 139);"></i></a>
+              <a href="#" class="instagram"><i class="icofont-instagram" style="color: rgb(165, 102, 139);"></i></a>
+              <a href="#" class="google-plus"><i class="icofont-skype" style="color: rgb(165, 102, 139);"></i></a>
+              <a href="#" class="linkedin"><i class="icofont-linkedin" style="color: rgb(165, 102, 139);"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-envelope"style="color: rgb(165, 102, 139);"></i>
+            <h3>Email Me</h3>
+            <p>jeranyamad@gmail.com</p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+          <div class="info-box" >
+            <i class="bx bx-phone-call"style="color: rgb(165, 102, 139);"></i>
+            <h3>Call Me</h3>
+            <p>+263 700000000</p>
+          </div>
+        </div>
+      </div>
+
+      <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
+        <div class="form-row">
+          <div class="col-md-6 form-group"  style="color: rgb(242, 215, 238);">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+            <div class="validate"></div>
+          </div>
+          <div class="col-md-6 form-group">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+            <div class="validate"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+          <div class="validate"></div>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+          <div class="validate"></div>
+        </div>
+        <div class="text-center"><button type="submit" style="color: rgb(165, 102, 139);">Send Message</button></div>
+      </form>
+
+    </div>
+  </section><!-- End Contact Section -->
+
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="assets/vendor/counterup/counterup.min.js"></script>
+    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/venobox/venobox.min.js"></script>
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+  
+  </body>
+  
+  </html>
+</>
